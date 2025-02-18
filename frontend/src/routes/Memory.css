@@ -1,0 +1,22 @@
+.memory-page{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.memory-page h2{
+    color: #1146a6;
+}
+.memory-page img{
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+}
+.comment-form{
+    width: 500px;
+}
+.comments-container{
+    width: 500px;
+}

@@ -127,7 +127,7 @@ const addComment = async (req, res) => {
     try {
         const {name, text} = req.body
 
-        if(!name || text){
+        if(!name || !text){
             return res.status(400).json({msg: "Por favor, preencha todos os campos."})
         }
 
@@ -139,7 +139,7 @@ const addComment = async (req, res) => {
         }
         memory.comments.push(comment)
 
-        await memory.save()
+        memory.save()
         res.json({msg: "Comentario adicionado!", memory})
     } catch (error) {
         res.status(500).send("Ocorreu um erro!")

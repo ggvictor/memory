@@ -38,7 +38,7 @@ form{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width:90vw;
+
 }
 
 input, textarea{
@@ -46,4 +46,13 @@ input, textarea{
   border-radius: 5px;
   border: 1px solid #ccc;
   width:100%;
+}
+.comment{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.comment-name{
+  font-weight: bold;
+  color: #555;
 }
