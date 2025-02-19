@@ -62,7 +62,7 @@ const getMemory = async(req, res) =>{
 const deleteMemory = async(req, res) =>{
     try {
         // *
-        const memory = await Memory.findByIdAndRemove(req.params.id)
+        const memory = await Memory.findByIdAndDelete(req.params.id)
 
         if(!memory){
             return res.status(404).json({msg: "Memória não encontrada"})
@@ -70,7 +70,8 @@ const deleteMemory = async(req, res) =>{
 
         removeOldImage(memory)
         res.json({msg: "Memória excluida!"})
-    } catch (error) {
+    } catch (err) {
+        console.log(err)
         res.status(500).send("Ocorreu um erro!")
     }
 }
